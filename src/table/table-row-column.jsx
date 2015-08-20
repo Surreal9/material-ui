@@ -82,9 +82,9 @@ let TableRowColumn = React.createClass({
         key={this.props.key}
         className={classes}
         style={this.mergeAndPrefix(styles.root, style)}
+        dangerouslySetInnerHTML={{__html: this.props.children}}
         {...handlers}
         {...other}>
-        {this.props.children}
       </td>
     );
   },
